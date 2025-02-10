@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/music-web-hanabri-front/static/css/main.21b2c976.css",
+    "main.js": "/music-web-hanabri-front/static/js/main.3e374675.js",
+    "static/js/453.ed3810f9.chunk.js": "/music-web-hanabri-front/static/js/453.ed3810f9.chunk.js",
+    "static/media/FuturaMdBTMedium.ttf": "/music-web-hanabri-front/static/media/FuturaMdBTMedium.dbbde3d53b68cf982647.ttf",
+    "static/media/link.cur": "/music-web-hanabri-front/static/media/link.4c23266fba4d0fdeb089.cur",
+    "static/media/pointer.cur": "/music-web-hanabri-front/static/media/pointer.0b6900d0e776b056427a.cur",
+    "static/media/unavailiable.cur": "/music-web-hanabri-front/static/media/unavailiable.30c3376d51b11488dd01.cur",
+    "index.html": "/music-web-hanabri-front/index.html",
+    "main.21b2c976.css.map": "/music-web-hanabri-front/static/css/main.21b2c976.css.map",
+    "main.3e374675.js.map": "/music-web-hanabri-front/static/js/main.3e374675.js.map",
+    "453.ed3810f9.chunk.js.map": "/music-web-hanabri-front/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21b2c976.css",
+    "static/js/main.3e374675.js"
+  ]
+}
