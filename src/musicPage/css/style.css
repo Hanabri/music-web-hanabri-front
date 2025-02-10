@@ -40,7 +40,7 @@ img[draggable="false"] {
     background-image:
         linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
         linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
-        radial-gradient(47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+        radial-gradient(closest-side at 47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
     background-blend-mode: multiply;
     display: flex;
     justify-content: space-around;
@@ -95,7 +95,6 @@ img[draggable="false"] {
     background: linear-gradient(90deg, rgba(247, 73, 212), rgba(90, 37, 234), rgba(50, 196, 245), rgba(96, 255, 165), rgba(226, 255, 62), rgba(255, 196, 77), rgba(255, 102, 77));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;/* 选中时的颜色 */
-    background-color: #c2c2c2; /* 选中时的背景色 */
   }
   li > a {
     color: inherit;
@@ -389,6 +388,7 @@ button:hover:after {
   width: calc(var(--s) + var(--g) * 2);
   height: calc(var(--s) + var(--g) * 2);
   border: var(--t) solid #c2c2c2;
+  z-index: -999;
   left: calc(var(--x) - var(--g));
   top: calc(var(--y) - var(--g));
   transition: 0.5s;
