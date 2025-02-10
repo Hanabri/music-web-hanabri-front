@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>HanabriHead</title>
+    <link rel="stylesheet" href="musicPage/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li><a onclick="javascript:location.reload();" class="nav-link active">HOME</a></li>
+            <li><a class="nav-link">RELEASES</a></li>
+          </ul>
+      </nav>
+      <!-- <img id="logo" alt="HanabriHead-logo" onclick="javascript:location.reload();" src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/Hanabri-logo1.png"> -->
+       <a id="logo1" alt="HanabriHead-logo" onclick="javascript:location.reload();">𝕳𝖆𝖓𝖆𝖇𝖗𝖎</a>
+      <nav>
+        <ul>
+            <li><a class="nav-link">ARTWORK</a></li>
+            <li><a href="#student-info" class="nav-link">INFO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+<!--      首页-->
+      <div>
+<!--      首页新作品-->
+      <section>
+<!--        <div class="background-img">-->
+        <div class="video-container">
+          <video src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/vedio/Anime%20Living%20Room.mp4" class="background-video" autoplay="autoplay" loop="loop" muted="muted"></video>
+          <div class="music-new">
+            <div class="music-new-div admission-top-under" id="music-new-div-id"><img class="music-new-img admission-top-under" src="https://i.pixiv.re/img-master/img/2021/01/13/22/50/38/87031447_p0_master1200.jpg"></div>
+            <div class="music-new-message">
+              <a href="https://www.bilibili.com/video/BV1RRrLY1E2o/?spm_id_from=333.999.0.0&vd_source=a0edde2bece62e1658401e4496bb73bd" target="_blank">
+                <button class="music-new-message-button admission-under-top">WATCH NOW</button>
+              </a>
+              <div class="music-new-message-title admission-under-top">Holographic Action</div>
+              <div class="music-new-message-author admission-under-top">By HANABRI</div>
+              <p class="new-text admission-under-top"><span class="text-white-50">Releases on </span>6 January 2025</p>
+              <button class="music-new-message-button-listen admission-under-top">LISTEN NOW</button>
+            </div>
+          </div>
+        </div>
+<!--        </div>-->
+      </section>
+<!--      音乐作品-->
+      <section class="works">
+        <a class="music-a">MUSIC</a>
+<!--        flex容器-->
+        <div class="music-flex">
+          <div class="pointer-border"></div>
+          <div class="explode">
+<!--          歌曲背景-->
+          <img class="img-thumbnail" data-audio="Moondance" src="https://img.hongyoubizhi.com/picture/pages/regular/2023/10/25/12/116649004_p0_master1200.jpg?x-oss-process=image/resize,m_fill,w_1000">
+          <audio id="Moondance" data-audio="Moondance">
+            <source src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/%E6%9C%88%E4%B9%8B%E8%88%9E.wav" type="audio/mpeg">
+          </audio>
+          <div class="overlay-box">
+            <div class="overlay">
+              <span class="text-uppercase-author">HANABRI<br></span>
+              <span class="text-uppercase-work">Moondance</span>
+            </div>
+          </div>
+          </div>
+          <div class="explode">
+            <!--          歌曲背景-->
+            <img class="img-thumbnail" data-audio="Unreal-memories" src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/imgs/picture2.png">
+            <audio id="Unreal-memories" data-audio="Unreal-memories">
+              <source src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/Unreal%20memories.wav" type="audio/mpeg">
+            </audio>
+            <div class="overlay-box">
+              <div class="overlay">
+                <span class="text-uppercase-author">HANABRI<br></span>
+                <span class="text-uppercase-work">Unreal Memories</span>
+              </div>
+            </div>
+          </div>
+          <div class="explode">
+            <!--          歌曲背景-->
+            <img class="img-thumbnail" data-audio="holographic-action" src="https://i.pixiv.re/img-master/img/2021/01/13/22/50/38/87031447_p0_master1200.jpg">
+            <audio id="holographic-action" data-audio="Unreal-memories">
+              <source src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/HolographicAction.wav" type="audio/mpeg">
+            </audio>
+            <div class="overlay-box">
+              <div class="overlay">
+                <span class="text-uppercase-author">HANABRI<br></span>
+                <span class="text-uppercase-work">Holographic Action</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+    </main>
+    <footer>
+      <address>
+        Copyright by 2024 HanabriHead
+      </address>
+    </footer>
+    <!-- 音乐播放器 -->
+    <div class="player">
+      <!-- audio标签 -->
+      <div class="mus">
+        <audio id="audio-player" class="audio-music" controls></audio>
+      </div>
+    </div>
+    <!-- 音频文件 -->
+    <script>
+      //刷新
+      document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.nav-link');
+        // 默认选中第一个链接
+        navLinks[0].classList.add('active');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+      });
+      window.addEventListener('load', function () {
+        window.scrollTo(0, 0);
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        const button = document.querySelector('.music-new-message-button-listen');
+        const audioPlayer = document.getElementById('audio-player');
+
+        // 封装音频文件路径
+        const audioPaths = [
+          'https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/HolographicAction.wav',
+        ];
+
+        // 当前播放的音频索引
+        let currentAudioIndex = 0;
+
+        // 设置当前音频路径
+        function setAudioSource(index) {
+          audioPlayer.src = audioPaths[index];
+        }
+
+        // 初始化音频路径
+        setAudioSource(currentAudioIndex);
+
+        button.addEventListener('click', function () {
+          // 检查当前音频是否为指定的音乐文件
+          if (audioPlayer.src === audioPaths[currentAudioIndex]) {
+            if (audioPlayer.paused) {
+              audioPlayer.play();
+            } else {
+              audioPlayer.pause();
+            }
+          } else {
+            // 如果不是指定的音乐文件，强制设置并播放
+            setAudioSource(currentAudioIndex);
+            audioPlayer.play();
+          }
+        });
+
+        // 可选：添加音频结束后的处理逻辑
+        audioPlayer.addEventListener('ended', function () {
+          // 切换到下一个音频
+          currentAudioIndex = (currentAudioIndex + 1) % audioPaths.length;
+          setAudioSource(currentAudioIndex);
+          audioPlayer.play();
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const images = document.querySelectorAll('img[data-audio]');
+        const audioPlayer = document.getElementById('audio-player');
+
+        // 音频文件路径映射
+        const audioSources = {
+          'Moondance': 'https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/%E6%9C%88%E4%B9%8B%E8%88%9E.wav',
+          'Unreal-memories': 'https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/Unreal%20memories.wav',
+          'holographic-action': 'https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/HolographicAction.wav',
+          // 可以添加更多音频映射
+        };
+
+        images.forEach(img => {
+          img.addEventListener('click', function () {
+            const audioId = this.getAttribute('data-audio');
+            const audioSrc = audioSources[audioId];
+
+            if (audioSrc) {
+              if (audioPlayer.src !== audioSrc) {
+                audioPlayer.src = audioSrc;
+              }
+
+              if (audioPlayer.paused) {
+                audioPlayer.play();
+              } else {
+                audioPlayer.pause();
+              }
+            }
+          });
+        });
+      });
+
+
+    </script>
+<!--    鼠标点击动效-->
+    <script src="./js/clickEffects.js"></script>
+    <script src="./js/trailingEffect.js"></script>
+<!--  音乐选中框-->
+    <script src="./js/musicBorder.js"></script>
+  </body>
+</html>
