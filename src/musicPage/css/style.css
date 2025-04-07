@@ -5,7 +5,8 @@
     }
   }
 html{
-    cursor: url("../../assets/mouse/pointer.cur"), auto;
+  cursor: url("../../assets/mouse/pointer.cur"), auto;
+
 }
 a:hover, a:focus, a:active, a.active {
   cursor:url(../../assets/mouse/link.cur), pointer!important;
@@ -26,7 +27,7 @@ img[draggable="false"] {
   body {
     background: #FFFFFF;
     color: #1b1b32;
-    font-family: Helvetica;
+    /*font-family: Helvetica;*/
     margin: 0;
     font-family: "Futuran";
   }
@@ -285,47 +286,6 @@ img[draggable="false"] {
   width: 25vw;
   overflow: hidden;
 }
-button::before {
-  content: "";
-  /* 按钮内部闪光块的宽高、颜色 */
-  width: 70%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  position: absolute;
-  top: 0;
-  left: -10px;
-  /* 倾斜闪光块 */
-  transform: skewX(-15deg);
-  /* 动画时间 */
-  transition: 0.5s;
-}
-button:hover:before {
-  /* 鼠标放上去之后改变位置，模拟闪光的动画 */
-  left: 102%;
-}
-
-/* 小一点的闪光块 */
-button::after {
-  content: "";
-  /* 按钮内部闪光块的宽高、颜色 */
-  width: 50px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-  /* 定位靠后一点 */
-  position: absolute;
-  top: 0;
-  left: -70px;
-  /* 倾斜闪光块 */
-  transform: skewX(-15deg);
-  /* 动画时间 */
-  transition: 0.5s;
-  /* 延时动画，比上面大的闪光块晚一点出去 */
-  transition-delay: 0.2s;
-}
-button:hover:after {
-  /* 和上面一样，鼠标放上去改变位置，可以写在一起 */
-  left: 102%;
-}
 
 .music-new-message-button{
   font-size: 0.7vw;
@@ -460,7 +420,7 @@ button:hover:after {
 }
 
 /* 隐藏滚动条 */
-div::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 /* 设置音频样式 */

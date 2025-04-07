@@ -1,22 +1,18 @@
 import React, {useLayoutEffect} from 'react';
 import {clickEffect} from '../js/clickEffects';
-import {refreshPinned,musicPlayback} from "../js/hanabriJs";
+import {musicPlayback} from "../js/hanabriJs";
 import {trailingEffect} from "../js/trailingEffect"
 import {musicBorder} from "../js/musicBorder"
 import './css/style.css'
+import FloatingBall from "./components/FloatingBall";
 function HanabriBody() {
-  function refreshPage() {
-    window.location.reload();
-  }
   useLayoutEffect(() => {
-    // 刷新时置顶页面
-    refreshPinned();
     //音乐播放相关
     musicPlayback();
     // 鼠标点击动效
     clickEffect();
     // 鼠标拖尾动效
-    trailingEffect();
+    // trailingEffect();
     // 音乐选中框
     musicBorder();
   }, []);
@@ -26,15 +22,15 @@ function HanabriBody() {
     <header>
       <nav>
         <ul>
-          <li><a onClick={refreshPage} className="nav-link active" href="null">HOME</a></li>
-          <li><a className="nav-link" href="null">RELEASES</a></li>
+          <li><a className="nav-link active" id={'home'} href="null">HOME</a></li>
+          <li><a className="nav-link" href="#!">RELEASES</a></li>
         </ul>
       </nav>
-      <a id="logo1" onClick={refreshPage} href="null">𝕳𝖆𝖓𝖆𝖇𝖗𝖎</a>
+      <a id="logo1" href="null">𝕳𝖆𝖓𝖆𝖇𝖗𝖎</a>
       <nav>
         <ul>
-          <li><a className="nav-link" href="null">ARTWORK</a></li>
-          <li><a href="null" className="nav-link">INFO</a></li>
+          <li><a className="nav-link" href="#!">ARTWORK</a></li>
+          <li><a href="#!" className="nav-link">MESSAGE</a></li>
         </ul>
       </nav>
     </header>
@@ -126,7 +122,7 @@ function HanabriBody() {
     </main>
     <footer>
       <address>
-        Copyright by 2024 HanabriHead
+        Copyright by 2024 Hanabri
       </address>
     </footer>
     {/*音乐播放器 */}
@@ -136,6 +132,8 @@ function HanabriBody() {
         <audio id="audio-player" className="audio-music" controls></audio>
       </div>
     </div>
+      {/*悬浮球*/}
+      <FloatingBall>Log in</FloatingBall>
     </div>
 
 
