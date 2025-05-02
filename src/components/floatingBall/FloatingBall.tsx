@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import Popup from '../popup/Popup';
-import './floatingBall.css';
+import './floatingBall.module.css';
 
 interface FloatingBallProps {
     children: ReactNode;
