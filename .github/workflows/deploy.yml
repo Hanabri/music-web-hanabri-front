@@ -25,6 +25,6 @@ jobs:
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20                          # :contentReference[oaicite:13]{index=13}
         with:
-          vercel-token: ${{ OsFijRWjz2ZtRd0HDGoYhnUb }}
+          vercel-token: OsFijRWjz2ZtRd0HDGoYhnUb
           vercel-args: "--prod"
           working-directory: .
