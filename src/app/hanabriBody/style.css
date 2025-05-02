@@ -6,7 +6,6 @@
   }
 html{
   cursor: url("../../assets/mouse/pointer.cur"), auto;
-
 }
 a:hover, a:focus, a:active, a.active {
   cursor:url(../../assets/mouse/link.cur), pointer!important;
@@ -22,14 +21,14 @@ img[draggable="false"] {
 }
 @font-face {
   font-family: "Futuran";
-  src:url("../../assets/font/FuturaMdBTMedium.ttf");
+  src:url("../../assets/font/Futura.ttf");
 }
   body {
     background: #FFFFFF;
     color: #1b1b32;
     /*font-family: Helvetica;*/
     margin: 0;
-    font-family: "Futuran";
+    font-family: "Futuran"!important;
   }
 
   header {
@@ -50,7 +49,7 @@ img[draggable="false"] {
     top: 0;
   }
 .hanabri-logo{
-  width: 14vw;
+  width: 13vw;
   height: 5vh;
 }
   #logo {
