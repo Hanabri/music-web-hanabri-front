@@ -1,0 +1,541 @@
+
+html{
+    cursor: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Normal.cur"), auto;
+}
+a:hover, a:focus, a:active, a.active {
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+}
+button:hover{
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+}
+button{
+    border-radius: 3px;
+}
+
+@font-face {
+    font-family: "Futuran";
+    src:url("../assets/font/Futura.ttf");
+}
+body {
+    background: #FFFFFF;
+    color: #1b1b32;
+    /*font-family: Helvetica;*/
+    margin: 0;
+    font-family: "Futuran"!important;
+}
+
+header {
+    z-index: 1000;
+    width: 100%;
+    height: 8vh;
+    /*background-color: #000000;*/
+    background-color: #797572;
+    background-image:
+            linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
+            linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
+            radial-gradient(closest-side at 47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+.hanabri-logo{
+    width: 13vw;
+    height: 5vh;
+}
+#logo {
+    width: max(10rem, 18vw);
+    aspect-ratio: 25 / 4;
+    padding: 0.4rem;
+    cursor:pointer
+}
+/*#logo1 {*/
+/*  color: #FFFFFF;*/
+/*  font-size: 2vh;*/
+/*  padding: 0.4rem;*/
+/*  cursor:pointer*/
+/*}*/
+
+nav {
+    width: 50%;
+    height: 50px;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3vw;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav > ul > li {
+    color: #FFFFFF;
+    margin: 0 0.2rem;
+    flex: 0 0 auto;
+    padding: 0.2rem;
+    display: block;
+}
+nav > ul > li > .nav-link{
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.5vh;
+    transition: transform 1.3s cubic-bezier(0.23, 1, 0.32, 1), font-weight 0.15s ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+}
+nav > ul > li > .nav-link:hover {
+    background: linear-gradient(90deg, rgba(247, 73, 212), rgba(90, 37, 234), rgba(50, 196, 245), rgba(96, 255, 165), rgba(226, 255, 62), rgba(255, 196, 77), rgba(255, 102, 77));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+nav > ul > li > .nav-link.active {
+    background: linear-gradient(90deg, rgba(247, 73, 212), rgba(90, 37, 234), rgba(50, 196, 245), rgba(96, 255, 165), rgba(226, 255, 62), rgba(255, 196, 77), rgba(255, 102, 77));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 3vh;
+}
+
+footer {
+    height: 5vw;
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+
+address {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.3em;
+    font-style: normal;
+}
+main{
+    margin-top: 30px;
+}
+.music-a {
+    font-size: 1.5vw !important;
+    font-weight: normal !important;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.music-a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    transition: width 600ms ease
+}
+
+.music-a:hover::after {
+    width: 100%;
+    transform-origin: left;
+}
+
+.nav-link:hover{
+    font-weight: 700;
+    transform: scale(1.5); /* 替换 font-size 修改 */
+    transform-origin: center center; /* 控制缩放基点 */
+}
+
+a, a:hover {
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+}
+.background-img {
+    position: relative; /* 使伪元素定位相对于此元素 */
+    max-width: 100%;
+    height: 100vh; /* 保持图片的纵横比 */
+    display: block;
+    margin: 0 auto;
+    padding: 9vw 8vw 0 8vw;
+}
+.background-video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -999;
+    filter: brightness(0.7); /* 调整亮度，值越小越暗 */
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 保持视频高度与视口一致 */
+    overflow: hidden;
+}
+.background-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://img.hongyoubizhi.com/picture/pages/original/2022/08/31/13/101601312_p0.jpg");
+    background-size: cover; /* 覆盖整个背景区域 */
+    background-repeat: no-repeat; /* 不重复背景图片 */
+    background-position: center; /* 图片居中 */
+    filter: brightness(0.7); /* 调整亮度，值越小越暗 */
+    z-index: -1; /* 确保背景图片在内容下方 */
+}
+.music-new{
+    width: 65vw;
+    height: 30vw;
+    margin: 9vw auto;/* 视频背景 */
+    /*margin: 0 auto;!* 图片背景 *!*/
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+}
+/*首页更新图片*/
+.music-new-img{
+    width: 100%;
+    height: 100%;
+}
+
+/*图片容器*/
+.music-new-div{
+    width: 26vw;
+    height: 26vw;
+    position: relative;
+}
+.music-new-div::before {
+    content: '';
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    width: 104%; /* calc方法可以用来动态计算长度 */
+    height: 104%;
+    /*border-radius: 10px;*/
+    z-index: -1;
+    background: repeating-conic-gradient(from var(--range), #0ff,#f0f,#f00,#ff0,#0f0,#0ff);
+    opacity: 0; /* 初始状态透明 */
+    animation: fadeIn 1.5s forwards 1.5s, rotating 8s linear infinite 1s; /* 顺序：fadeIn 动画，rotating 动画 */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@property --range {
+    initial-value: 0deg;
+    syntax: '<angle>';
+    inherits: false;
+}
+@keyframes rotating {
+    0% {
+        --range: 0deg;
+    }
+    100% {
+        --range: 360deg;
+    }
+}
+
+/*首页更新文字*/
+.music-new-message{
+    margin: auto 0;
+    width: 20vw;
+    height: 20vw;
+}
+/*首页更新文字*/
+.music-new-message-title{
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+.music-new-message-author{
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 1.5vw;
+}
+.new-text{
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 1vw;
+}
+.text-white-50{
+    color: rgba(255, 255, 255, .5) !important;
+    font-size: 1vw;
+}
+.music-new-message-button-listen{
+    color: #FFFFFF;
+    background-color: #00a55e;
+    border: 0;
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1vw;
+    height: 4vw;
+    width: 25vw;
+    overflow: hidden;
+}
+
+.music-new-message-button{
+    font-size: 0.7vw;
+    padding: 0 0.5vw 0 0.5vw;
+    height: 1.5vw;
+    text-align: center;
+    border: 0;
+    color: #FFFFFF;
+    background-color: #212121;
+    overflow: hidden;
+}
+.admission-top-under{
+    opacity: 0; /* 初始状态透明 */
+    transform: translateY(-100%); /* 从上方100%的位置开始 */
+    animation: slideInFromTop 1.5s forwards; /* 动画名称、持续时间、填充模式 */
+}
+.admission-under-top{
+    opacity: 0; /* 初始状态透明 */
+    transform: translateY(100%); /* 从下方100%的位置开始 */
+    animation: slideInFromBottom 1.5s forwards; /* 动画名称、持续时间、填充模式 */
+}
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.works{
+    padding: 1vw 10vw 0;
+    margin-bottom: 60px;
+}
+.music-flex{
+    margin-top: 1vw;
+    display: flex;
+    gap: 5vw;
+    position: relative;
+}
+
+.pointer-border{
+    position: absolute;
+    --l: 2vw;/* 边框长度 */
+    --g: 8px;/* 边框间隔 */
+    --t: 3px;/* 边框厚度 */
+    --s: 17vw;/* 图片尺寸 */
+    --x: 0px;/* 边框坐标 */
+    --y: 0px;/* 边框坐标 */
+    width: calc(var(--s) + var(--g) * 2);
+    height: calc(var(--s) + var(--g) * 2);
+    border: var(--t) solid #c2c2c2;
+    z-index: -999;
+    left: calc(var(--x) - var(--g));
+    top: calc(var(--y) - var(--g));
+    transition: 0.5s;
+    --mask:conic-gradient(at var(--l) var(--l), transparent 75%,#c2c2c2 75%) 0 0 / calc(100% - var(--l)) calc(100% - var(--l));
+    mask: var(--mask);
+    -webkit-mask: var(--mask);
+}
+
+.explode{
+    width: 17vw;
+    height: 17vw;
+    /*border: #c2c2c2 1px solid;*/
+    overflow: hidden; /* 隐藏超出部分 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    /*border-radius: 4px;*/
+}
+.img-thumbnail{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* 保持图片比例并覆盖整个容器 */
+    transition: transform 1s, filter 2s; /* 平滑过渡效果 */
+}
+.img-thumbnail:hover{
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+    transform: scale(1.1); /* 放大1.1倍 */
+    filter: blur(2px);     /* 模糊2像素 */
+}
+.overlay-box{
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 1vw;
+    left: 1vw;
+    color: white; /* 文字颜色 */
+    font-size: 1vw; /* 文字大小 */
+    letter-spacing: 0.1em;
+    z-index: 999;
+}
+
+.overlay span {
+    display: block;
+    margin: -2px 0; /* 调整间距 */
+    opacity: 0;
+    transform: translateX(-100%); /* 默认从左侧移出 */
+    transition: transform 0.5s, opacity 0.5s;
+}
+.overlay span.text-uppercase-author{
+    font-size: 1vw;
+    font-weight: bold;
+    transition-delay: 0s; /* 第一行文字无延迟 */
+}
+.overlay span.text-uppercase-work{
+    font-size: 0.9vw;
+    transition-delay: 0.3s; /* 第二行文字延迟0.5秒 */
+}
+.explode:hover .overlay span {
+    opacity: 1;
+    transform: translateX(0); /* 平滑入场 */
+}
+
+/*音频播放*/
+.audio-music{
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+}
+
+/* 隐藏滚动条 */
+html::-webkit-scrollbar {
+    display: none;
+}
+/* 设置音频样式 */
+audio {
+    width: 100vw; /* 宽度为100% */
+    height: 3vw; /* 高度为50px */
+    max-height: 50px;
+    border-radius: 10px; /* 边框半径为10px */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 设置音频播放进度条的颜色 */
+audio::-webkit-media-controls-progress-bar {
+    background-color: #000;
+}
+
+/* 隐藏音频播放器的背景颜色 */
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(216, 218, 221, 0.0);
+}
+/*手机移动端适配*/
+@media only screen and (max-width: 800px) {
+    header {
+        height: 20vw;
+        background-color: #000000;
+        position: absolute;
+        top: 0;
+    }
+    #logo1 {
+        font-size: 18px;
+    }
+    main {
+        padding-top: 10vw;
+    }
+    li > a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .nav-link:hover{
+        font-size: unset;
+        font-weight: unset;
+    }
+    nav > ul > li:hover {
+        background: #CC6CE7;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .nav-link.active {
+        background: #CC6CE7;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    .background-img {
+        position: relative; /* 使伪元素定位相对于此元素 */
+        max-width: 100%;
+        height: 30vh; /* 保持图片的纵横比 */
+        display: block;
+        margin: 0 auto;
+        padding: 9vw 8vw 0 8vw;
+    }
+    .background-video{
+        position: absolute;
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+        z-index: -999;
+        filter: brightness(0.7); /* 调整亮度，值越小越暗 */
+    }
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 30vh; /* 保持视频高度与视口一致 */
+        overflow: hidden;
+    }
+    .background-img::before {
+        height: 100%;
+    }
+    .music-new{
+        margin: 10vw auto;
+    }
+    .music-new-message{
+        margin: 0 0 ;
+    }
+    .music-new-message-button{
+        height: 2.5vw;
+        font-size: 0.4vw;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+    .music-new-img{
+        border: yellowgreen 2px solid;
+    }
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1;
+    }
+    footer {
+        height: 15vw;
+    }
+    address {
+        color: #FFFFFF;
+        text-align: center;
+        padding: 2vw;
+        font-style: normal;
+    }
+}
