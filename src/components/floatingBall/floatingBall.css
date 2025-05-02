@@ -12,7 +12,7 @@
         letter-spacing: 2px;
         font-size: 30px;
         color: rgb(255, 255, 255);
-        cursor: pointer;
+        cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
         border-radius: 15px;
         display: flex;
         align-items: center;
@@ -23,6 +23,9 @@
         -moz-user-select: none;
         -ms-user-select: none;
         z-index: 999;
+    }
+    .floating-ball:active {
+        cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Move.cur"), grabbing!important;
     }
     .floating-ball:hover {
         transform: scale(1.05);
@@ -82,7 +85,6 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         transition: none;
     }
-
     .floating-ball * {
         user-select: none;
         pointer-events: none;

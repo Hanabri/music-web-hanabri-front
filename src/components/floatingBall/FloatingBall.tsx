@@ -120,7 +120,7 @@ const FloatingBall: React.FC<FloatingBallProps> = ({
             style={{
                 left: position.x,
                 top: position.y,
-                cursor: isDragging ? 'grabbing' : 'grab'
+                cursor: isDragging ? 'grabbing' : 'pointer'
             }}
             onMouseDown={handleMouseDown}
           >

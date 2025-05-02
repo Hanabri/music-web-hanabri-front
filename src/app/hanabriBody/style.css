@@ -5,20 +5,18 @@
     }
   }
 html{
-  cursor: url("../../assets/mouse/pointer.cur"), auto;
+  cursor: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Normal.cur"), auto;
 }
 a:hover, a:focus, a:active, a.active {
-  cursor:url(../../assets/mouse/link.cur), pointer!important;
+  cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
 }
 button:hover{
-  cursor:url(../../assets/mouse/link.cur), pointer!important;
+  cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
 }
 button{
   border-radius: 3px;
 }
-img[draggable="false"] {
-  cursor:url(../../assets/mouse/unavailiable.cur), pointer!important;
-}
+
 @font-face {
   font-family: "Futuran";
   src:url("../../assets/font/Futura.ttf");
@@ -385,7 +383,7 @@ img[draggable="false"] {
   transition: transform 1s, filter 2s; /* 平滑过渡效果 */
 }
 .img-thumbnail:hover{
-  cursor:url(../../assets/mouse/link.cur), pointer!important;
+  cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
   transform: scale(1.1); /* 放大1.1倍 */
   filter: blur(2px);     /* 模糊2像素 */
 }
