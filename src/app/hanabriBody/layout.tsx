@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import './style.module.css';
+import '../globals.css';
 
 export default function HanabriLayout({children,}: {
     children: React.ReactNode
