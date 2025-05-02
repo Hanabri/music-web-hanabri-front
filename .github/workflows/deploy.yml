@@ -1,0 +1,30 @@
+name: CI/CD Next.js SSR
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3                                    # :contentReference[oaicite:7]{index=7}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'                                        # :contentReference[oaicite:8]{index=8}
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Next.js App
+        run: npm run build                                         # :contentReference[oaicite:9]{index=9}
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20                          # :contentReference[oaicite:13]{index=13}
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: "--prod --yes"
+          working-directory: .
