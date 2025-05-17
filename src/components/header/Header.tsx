@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import styles from "./header.module.css"
+import Image from "next/image";
 function Header(): React.JSX.Element  {
 
 
@@ -14,7 +15,7 @@ function Header(): React.JSX.Element  {
                 </ul>
             </nav>
             <Link href="/" id="logo1" onClick={(e) => {e.preventDefault();window.location.href = "/";}}>
-              <img className={'hanabri-logo'} src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/icon/Hanabri_Logo.png" alt="HANABRI"/>
+              <Image className={styles.hanabriLogo} src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/icon/Hanabri_Logo.png" width={300} height={80} alt="HANABRI"/>
             </Link>
             <nav>
                 <ul>

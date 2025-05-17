@@ -11,7 +11,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
 
     return (
-        <div className={styles.popuOverlay} onClick={onClose}>
+        <div className={styles.popupOverlay}>
             <div
                 className={styles.popupContent}
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}

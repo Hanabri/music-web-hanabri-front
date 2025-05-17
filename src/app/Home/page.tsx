@@ -7,6 +7,7 @@ import {musicBorder} from "@/utils/musicBorder";
 import MusicPlayer from "@/components/musicPlayer/MusicPlayer";
 import FloatingBall from "@/components/floatingBall/FloatingBall";
 import styles from './home.module.css';
+import Image from "next/image";
 function HomePage(): React.JSX.Element  {
     useLayoutEffect(() => {
         //音乐播放相关
@@ -30,10 +31,12 @@ function HomePage(): React.JSX.Element  {
                         <video src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/vedio/Anime%20Living%20Room.mp4"
                                className={styles.backgroundVideo} autoPlay={true} loop={true} muted={true}></video>
                         <div className={styles.musicNew}>
-                            <div className={`${styles.musicNewDiv} ${styles.admissionTopUnder}`}><img
+                            <div className={`${styles.musicNewDiv} ${styles.admissionTopUnder}`}>
+                                <Image
                                 className={`${styles.musicNewImg} ${styles.admissionTopUnder}`}
                                 alt={"musicNewImg"}
-                                src="https://i.pixiv.re/img-master/img/2021/01/13/22/50/38/87031447_p0_master1200.jpg"/></div>
+                                src="https://i.pixiv.re/img-master/img/2021/01/13/22/50/38/87031447_p0_master1200.jpg" width={800}
+                                height={800}/></div>
                             <div className={styles.musicNewMessage}>
                                 <a
                                     href="https://www.bilibili.com/video/BV1RRrLY1E2o/?spm_id_from=333.999.0.0&vd_source=a0edde2bece62e1658401e4496bb73bd"
@@ -58,7 +61,9 @@ function HomePage(): React.JSX.Element  {
                         <div className={styles.pointerBorder}></div>
                         <div className={styles.explode}>
                             {/*歌曲背景*/}
-                            <img className={styles.imgThumbnail} data-audio="Moondance" alt={styles.imgThumbnail}
+                            <Image className={styles.imgThumbnail} data-audio="Moondance" alt={styles.imgThumbnail} width={500}
+                                   height={500}
+                                   quality={85}
                                  src="https://img.hongyoubizhi.com/picture/pages/regular/2023/10/25/12/116649004_p0_master1200.jpg?x-oss-process=image/resize,m_fill,w_1000"/>
                             <audio id="Moondance" data-audio="Moondance">
                                 <source
@@ -74,7 +79,9 @@ function HomePage(): React.JSX.Element  {
                         </div>
                         <div className={styles.explode}>
                             {/*歌曲背景*/}
-                            <img className={styles.imgThumbnail} data-audio="Unreal-memories" alt={styles.imgThumbnail}
+                            <Image className={styles.imgThumbnail} data-audio="Unreal-memories" alt={styles.imgThumbnail} width={500}
+                                   height={500}
+                                   quality={85}
                                  src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/imgs/picture2.png"/>
                             <audio id="Unreal-memories" data-audio="Unreal-memories">
                                 <source src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/Unreal%20memories.wav"
@@ -89,7 +96,9 @@ function HomePage(): React.JSX.Element  {
                         </div>
                         <div className={styles.explode}>
                             {/*歌曲背景*/}
-                            <img className={styles.imgThumbnail} data-audio="holographic-action" alt={styles.imgThumbnail}
+                            <Image className={styles.imgThumbnail} data-audio="holographic-action" alt={styles.imgThumbnail} width={500}
+                                   height={500}
+                                   quality={85}
                                  src="https://i.pixiv.re/img-master/img/2021/01/13/22/50/38/87031447_p0_master1200.jpg"/>
                             <audio id="holographic-action" data-audio="Unreal-memories">
                                 <source src="https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/music/HolographicAction.wav"

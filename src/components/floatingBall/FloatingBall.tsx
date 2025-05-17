@@ -116,7 +116,7 @@ const FloatingBall: React.FC<FloatingBallProps> = ({
       <>
           <div
             ref={ballRef}
-            className={`${styles.floatingBall} ${isDragging ? 'dragging' : ''}`}
+            className={`${styles.floatingBall} ${isDragging ? `${styles.dragging}` : ''}`}
             style={{
                 left: position.x,
                 top: position.y,

@@ -1,7 +1,8 @@
 
-.hanabri-logo{
+.hanabriLogo{
     width: 13vw;
     height: 5vh;
+    object-fit: cover;
 }
 #logo {
     width: max(10rem, 18vw);
