@@ -6,20 +6,19 @@
 }
 
 /* 设置音频样式 */
-:global(audio) {
+.audioPlayer :global(audio) {  /* 添加本地类名容器 */
     width: 100vw; /* 宽度为100% */
     height: 3vw; /* 高度为50px */
     max-height: 50px;
     border-radius: 10px; /* 边框半径为10px */
     background-color: rgba(255, 255, 255, 0.3);
 }
-
 /* 设置音频播放进度条的颜色 */
-audio::-webkit-media-controls-progress-bar {
+.audioPlayer :global(audio)::-webkit-media-controls-progress-bar {
     background-color: #000;
 }
 
 /* 隐藏音频播放器的背景颜色 */
-audio::-webkit-media-controls-enclosure {
+.audioPlayer :global(audio)::-webkit-media-controls-enclosure {
     background-color: rgba(216, 218, 221, 0.0);
 }
