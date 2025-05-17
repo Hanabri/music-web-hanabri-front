@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import "./header.module.css"
+import styles from "./header.module.css"
 function Header(): React.JSX.Element  {
 
 
     return (
-        <header>
+        <header className={styles.navWrapper}>
             <nav>
                 <ul>
                     <li><Link className={`nav-link ${usePathname() === '/' ? 'active' : ''}`}  id="home" href="/">HOME</Link></li>
