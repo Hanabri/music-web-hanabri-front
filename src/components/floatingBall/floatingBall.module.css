@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Futuran";
-    src:url("/font/Futura.ttf");
+    src: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/font/Futura.ttf"); /* 构建后的实际路径 */
 }
 @media only screen and (min-width: 800px) {
 /*媒体查询电脑端*/
