@@ -4,7 +4,7 @@
 }
 @media only screen and (min-width: 800px) {
 /*媒体查询电脑端*/
-    .floating-ball {
+    .floatingBall {
         position: fixed;
         width: 170px;
         height: 70px;
@@ -24,14 +24,14 @@
         -ms-user-select: none;
         z-index: 999;
     }
-    .floating-ball:active {
+    .floatingBall:active {
         cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Move.cur"), grabbing!important;
     }
-    .floating-ball:hover {
+    .floatingBall:hover {
         transform: scale(1.05);
         /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);*/
     }
-    .floating-ball:before {
+    .floatingBall:before {
         content: "";
         background: linear-gradient(
                 45deg,
@@ -54,11 +54,11 @@
         -webkit-filter: blur(5px);
         width: calc(100% + 4px);
         height: calc(100% + 4px);
-        animation: glowing-floating-ball 20s linear infinite;
+        animation: glowing-floatingBall 20s linear infinite;
         transition: opacity 0.3s ease-in-out;
         border-radius: 10px;
     }
-    @keyframes glowing-floating-ball {
+    @keyframes glowing-floatingBall {
         0% {
             background-position: 0 0;
         }
@@ -70,7 +70,7 @@
         }
     }
 
-    .floating-ball:after {
+    .floatingBall:after {
         z-index: -1;
         content: "";
         position: absolute;
@@ -81,11 +81,11 @@
         top: 0;
         border-radius: 10px;
     }
-    .floating-ball.dragging {
+    .floatingBall.dragging {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         transition: none;
     }
-    .floating-ball * {
+    .floatingBall * {
         user-select: none;
         pointer-events: none;
     }

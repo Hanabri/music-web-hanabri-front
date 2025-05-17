@@ -1,0 +1,25 @@
+/*音频播放*/
+.audioMusic{
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+}
+
+/* 设置音频样式 */
+:global(audio) {
+    width: 100vw; /* 宽度为100% */
+    height: 3vw; /* 高度为50px */
+    max-height: 50px;
+    border-radius: 10px; /* 边框半径为10px */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 设置音频播放进度条的颜色 */
+audio::-webkit-media-controls-progress-bar {
+    background-color: #000;
+}
+
+/* 隐藏音频播放器的背景颜色 */
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(216, 218, 221, 0.0);
+}

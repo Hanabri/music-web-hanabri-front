@@ -1,0 +1,379 @@
+
+.musicA {
+    font-size: 1.5vw !important;
+    font-weight: normal !important;
+    color: #000000;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.musicA::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    transition: width 600ms ease
+}
+
+.musicA:hover::after {
+    width: 100%;
+    transform-origin: left;
+}
+
+
+.backgroundImg {
+    position: relative; /* 使伪元素定位相对于此元素 */
+    max-width: 100%;
+    height: 100vh; /* 保持图片的纵横比 */
+    display: block;
+    margin: 0 auto;
+    padding: 9vw 8vw 0 8vw;
+}
+.backgroundVideo{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -999;
+    filter: brightness(0.7); /* 调整亮度，值越小越暗 */
+}
+.videoContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 保持视频高度与视口一致 */
+    overflow: hidden;
+}
+.backgroundImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("http://img.hongyoubizhi.com/picture/pages/original/2022/08/31/13/101601312_p0.jpg");
+    background-size: cover; /* 覆盖整个背景区域 */
+    background-repeat: no-repeat; /* 不重复背景图片 */
+    background-position: center; /* 图片居中 */
+    filter: brightness(0.7); /* 调整亮度，值越小越暗 */
+    z-index: -1; /* 确保背景图片在内容下方 */
+}
+.musicNew{
+    width: 65vw;
+    height: 30vw;
+    margin: 9vw auto;/* 视频背景 */
+    /*margin: 0 auto;!* 图片背景 *!*/
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+}
+/*首页更新图片*/
+.musicNewImg{
+    width: 100%;
+    height: 100%;
+}
+
+/*图片容器*/
+.musicNewDiv{
+    width: 26vw;
+    height: 26vw;
+    position: relative;
+}
+.musicNewDiv::before {
+    content: '';
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    width: 104%; /* calc方法可以用来动态计算长度 */
+    height: 104%;
+    /*border-radius: 10px;*/
+    z-index: -1;
+    background: repeating-conic-gradient(from var(--range), #0ff,#f0f,#f00,#ff0,#0f0,#0ff);
+    opacity: 0; /* 初始状态透明 */
+    animation: fadeIn 1.5s forwards 1.5s, rotating 8s linear infinite 1s; /* 顺序：fadeIn 动画，rotating 动画 */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@property --range {
+    initial-value: 0deg;
+    syntax: '<angle>';
+    inherits: false;
+}
+@keyframes rotating {
+    0% {
+        --range: 0deg;
+    }
+    100% {
+        --range: 360deg;
+    }
+}
+
+/*首页更新文字*/
+.musicNewMessage{
+    margin: auto 0;
+    width: 20vw;
+    height: 20vw;
+}
+/*首页更新文字*/
+.musicNewMessageTitle{
+    color: #FFFFFF;
+    font-size: 3vw;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+}
+.musicNewMessageAuthor{
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 1.5vw;
+}
+.newText{
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 1vw;
+}
+.textWhite50{
+    color: rgba(255, 255, 255, .5) !important;
+    font-size: 1vw;
+}
+.musicNewMessageButtonListen{
+    color: #FFFFFF;
+    background-color: #00a55e;
+    border: 0;
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1vw;
+    height: 4vw;
+    width: 25vw;
+    overflow: hidden;
+}
+
+.musicNewMessageButton{
+    font-size: 0.7vw;
+    padding: 0 0.5vw 0 0.5vw;
+    height: 1.5vw;
+    text-align: center;
+    border: 0;
+    color: #FFFFFF;
+    background-color: #212121;
+    overflow: hidden;
+}
+.admissionTopUnder{
+    opacity: 0; /* 初始状态透明 */
+    transform: translateY(-100%); /* 从上方100%的位置开始 */
+    animation: slideInFromTop 1.5s forwards; /* 动画名称、持续时间、填充模式 */
+}
+.admissionUnderTop{
+    opacity: 0; /* 初始状态透明 */
+    transform: translateY(100%); /* 从下方100%的位置开始 */
+    animation: slideInFromBottom 1.5s forwards; /* 动画名称、持续时间、填充模式 */
+}
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.works{
+    padding: 1vw 10vw 0;
+    margin-bottom: 60px;
+}
+.musicFlex{
+    margin-top: 1vw;
+    display: flex;
+    gap: 5vw;
+    position: relative;
+}
+
+.pointerBorder{
+    position: absolute;
+    --l: 2vw;/* 边框长度 */
+    --g: 8px;/* 边框间隔 */
+    --t: 3px;/* 边框厚度 */
+    --s: 17vw;/* 图片尺寸 */
+    --x: 0px;/* 边框坐标 */
+    --y: 0px;/* 边框坐标 */
+    width: calc(var(--s) + var(--g) * 2);
+    height: calc(var(--s) + var(--g) * 2);
+    border: var(--t) solid #c2c2c2;
+    z-index: -999;
+    left: calc(var(--x) - var(--g));
+    top: calc(var(--y) - var(--g));
+    transition: 0.5s;
+    --mask:conic-gradient(at var(--l) var(--l), transparent 75%,#c2c2c2 75%) 0 0 / calc(100% - var(--l)) calc(100% - var(--l));
+    mask: var(--mask);
+    -webkit-mask: var(--mask);
+}
+
+.explode{
+    width: 17vw;
+    height: 17vw;
+    /*border: #c2c2c2 1px solid;*/
+    overflow: hidden; /* 隐藏超出部分 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    /*border-radius: 4px;*/
+}
+.imgThumbnail{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* 保持图片比例并覆盖整个容器 */
+    transition: transform 1s, filter 2s; /* 平滑过渡效果 */
+}
+.imgThumbnail:hover{
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+    transform: scale(1.1); /* 放大1.1倍 */
+    filter: blur(2px);     /* 模糊2像素 */
+}
+.overlayBox{
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 1vw;
+    left: 1vw;
+    color: white; /* 文字颜色 */
+    font-size: 1vw; /* 文字大小 */
+    letter-spacing: 0.1em;
+    z-index: 999;
+}
+
+.overlay span {
+    display: block;
+    margin: -2px 0; /* 调整间距 */
+    opacity: 0;
+    transform: translateX(-100%); /* 默认从左侧移出 */
+    transition: transform 0.5s, opacity 0.5s;
+}
+.overlay span.textUppercaseAuthor{
+    font-size: 1vw;
+    font-weight: bold;
+    transition-delay: 0s; /* 第一行文字无延迟 */
+}
+.overlay span.textUppercaseWork{
+    font-size: 0.9vw;
+    transition-delay: 0.3s; /* 第二行文字延迟0.5秒 */
+}
+.explode:hover .overlay span {
+    opacity: 1;
+    transform: translateX(0); /* 平滑入场 */
+}
+
+
+
+/*手机移动端适配*/
+/*@media only screen and (max-width: 800px) {*/
+/*    header {*/
+/*        height: 20vw;*/
+/*        background-color: #000000;*/
+/*        position: absolute;*/
+/*        top: 0;*/
+/*    }*/
+/*    #logo1 {*/
+/*        font-size: 18px;*/
+/*    }*/
+/*    main {*/
+/*        padding-top: 10vw;*/
+/*    }*/
+/*    li > a {*/
+/*        color: inherit;*/
+/*        text-decoration: none;*/
+/*    }*/
+/*    .nav-link:hover{*/
+/*        font-size: unset;*/
+/*        font-weight: unset;*/
+/*    }*/
+/*    nav > ul > li:hover {*/
+/*        background: #CC6CE7;*/
+/*        -webkit-text-fill-color: transparent;*/
+/*        -webkit-background-clip: text;*/
+/*    }*/
+/*    .nav-link.active {*/
+/*        background: #CC6CE7;*/
+/*        -webkit-text-fill-color: transparent;*/
+/*        -webkit-background-clip: text;*/
+/*    }*/
+/*    .backgroundImg {*/
+/*        position: relative; !* 使伪元素定位相对于此元素 *!*/
+/*        max-width: 100%;*/
+/*        height: 30vh; !* 保持图片的纵横比 *!*/
+/*        display: block;*/
+/*        margin: 0 auto;*/
+/*        padding: 9vw 8vw 0 8vw;*/
+/*    }*/
+/*    .backgroundVideo{*/
+/*        position: absolute;*/
+/*        height: 30vh;*/
+/*        width: 100%;*/
+/*        object-fit: cover;*/
+/*        z-index: -999;*/
+/*        filter: brightness(0.7); !* 调整亮度，值越小越暗 *!*/
+/*    }*/
+/*    .videoContainer {*/
+/*        position: relative;*/
+/*        width: 100%;*/
+/*        height: 30vh; !* 保持视频高度与视口一致 *!*/
+/*        overflow: hidden;*/
+/*    }*/
+/*    .backgroundImg::before {*/
+/*        height: 100%;*/
+/*    }*/
+/*    .musicNew{*/
+/*        margin: 10vw auto;*/
+/*    }*/
+/*    .musicNewMessage{*/
+/*        margin: 0 0 ;*/
+/*    }*/
+/*    .musicNewMessageButton{*/
+/*        height: 2.5vw;*/
+/*        font-size: 0.4vw;*/
+/*        border-radius: 2px;*/
+/*        overflow: hidden;*/
+/*    }*/
+/*    .musicNewImg{*/
+/*        border: yellowgreen 2px solid;*/
+/*    }*/
+/*    body, html {*/
+/*        margin: 0;*/
+/*        padding: 0;*/
+/*        height: 100%;*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    main {*/
+/*        flex: 1;*/
+/*    }*/
+/*    footer {*/
+/*        height: 15vw;*/
+/*    }*/
+/*    address {*/
+/*        color: #FFFFFF;*/
+/*        text-align: center;*/
+/*        padding: 2vw;*/
+/*        font-style: normal;*/
+/*    }*/
+/*}*/

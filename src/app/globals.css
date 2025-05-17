@@ -4,3 +4,77 @@
       box-sizing: border-box;
     }
   }
+
+html{
+    cursor: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Normal.cur"), auto;
+}
+
+a:hover, a:focus, a:active, a.active {
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+}
+button:hover{
+    cursor:url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/mouse/Small/Link.cur"), pointer!important;
+}
+button{
+    border-radius: 3px;
+}
+
+@font-face {
+    font-family: "Futuran";
+    src:url("../assets/font/Futura.ttf");
+}
+body {
+    background: #FFFFFF;
+    color: #1b1b32;
+    /*font-family: Helvetica;*/
+    margin: 0;
+    font-family: "Futuran"!important;
+}
+
+header {
+    z-index: 1000;
+    width: 100%;
+    height: 9vh;
+    /*background-color: #000000;*/
+    background-color: #797572;
+    background-image:
+            linear-gradient(-173deg, rgba(255,255,255,0.20) 0%, #000000 100%),
+            linear-gradient(72deg, rgba(255,255,255,0.25) 25%, rgba(0,0,0,0.25) 100%),
+            radial-gradient(closest-side at 47% 102%, rgba(255,255,255,0.50) 0%, rgba(21,24,32,0.60) 120%);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+
+main {
+    padding-top: 3vh;
+}
+
+footer {
+    height: 5vw;
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+
+address {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 0.3em;
+    font-style: normal;
+}
+main{
+    margin-top: 30px;
+}
+
+/* 隐藏滚动条 */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
+

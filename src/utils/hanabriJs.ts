@@ -1,8 +1,8 @@
 type AudioSourceMap = Record<string, string>;
 
-export function musicPlayback(): void {
+export function musicPlayback(musicNewMessageButtonListen: string): void {
   // 获取元素并添加类型断言
-  const button = document.querySelector<HTMLButtonElement>('.music-new-message-button-listen');
+  const button = document.querySelector<HTMLButtonElement>(`.${musicNewMessageButtonListen}`);
   const audioPlayer = document.getElementById('audio-player') as HTMLAudioElement;
 
   // 类型化音频路径数组

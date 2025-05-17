@@ -1,6 +1,6 @@
-export function musicBorder(): void {
+export function musicBorder(pointerBorderClass: string,  musicFlexClass: string): void {
     // 使用类型断言确保元素存在
-    const pointer = document.querySelector<HTMLElement>('.pointer-border');
+    const pointer = document.querySelector<HTMLElement>(`.${pointerBorderClass}`);
 
     if (!pointer) {
         console.error('Pointer border element not found');
@@ -8,7 +8,7 @@ export function musicBorder(): void {
     }
 
     // 使用更严格的图片元素选择
-    const imgs = document.querySelectorAll<HTMLImageElement>('.music-flex img');
+    const imgs = document.querySelectorAll<HTMLImageElement>(`.${musicFlexClass} img`);
 
     imgs.forEach(img => {
         // 添加事件前的元素存在检查

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import Popup from '../popup/Popup';
-import './floatingBall.module.css';
+import styles from './floatingBall.module.css';
 
 interface FloatingBallProps {
     children: ReactNode;
@@ -116,7 +116,7 @@ const FloatingBall: React.FC<FloatingBallProps> = ({
       <>
           <div
             ref={ballRef}
-            className={`floating-ball ${isDragging ? 'dragging' : ''}`}
+            className={`${styles.floatingBall} ${isDragging ? 'dragging' : ''}`}
             style={{
                 left: position.x,
                 top: position.y,
@@ -128,7 +128,7 @@ const FloatingBall: React.FC<FloatingBallProps> = ({
           </div>
           <Popup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)}>
               <h2>LOG IN</h2>
-              <div className="music-controls">
+              <div>
                   {/* 在此添加自定义内容 */}
               </div>
           </Popup>

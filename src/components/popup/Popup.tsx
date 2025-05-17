@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import './popup.module.css';
+import styles from './popup.module.css';
 
 interface PopupProps {
     isOpen: boolean;
@@ -11,12 +11,12 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="popup-overlay" onClick={onClose}>
+        <div className={styles.popuOverlay} onClick={onClose}>
             <div
-                className="popup-content"
+                className={styles.popupContent}
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
-                <button className="popup-close" onClick={onClose}>
+                <button className={styles.popupClose} onClick={onClose}>
                     &times;
                 </button>
                 {children}

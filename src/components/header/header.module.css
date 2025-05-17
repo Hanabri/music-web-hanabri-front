@@ -1,0 +1,62 @@
+
+.hanabri-logo{
+    width: 13vw;
+    height: 5vh;
+}
+#logo {
+    width: max(10rem, 18vw);
+    aspect-ratio: 25 / 4;
+    padding: 0.4rem;
+    cursor:pointer
+}
+/*#logo1 {*/
+/*  color: #FFFFFF;*/
+/*  font-size: 2vh;*/
+/*  padding: 0.4rem;*/
+/*  cursor:pointer*/
+/*}*/
+:global(nav) {
+    width: 50%;
+    height: 50px;
+}
+
+:global(nav) > :global(ul) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 3vw;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+
+:global(nav) > :global(ul) > :global(li) > :global(.nav-link){
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.5vh;
+    transition: transform 1.3s cubic-bezier(0.23, 1, 0.32, 1), font-weight 0.15s ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+}
+:global(nav) > :global(ul) > :global(li) > :global(.nav-link:hover) {
+    background: linear-gradient(90deg, rgba(247, 73, 212), rgba(90, 37, 234), rgba(50, 196, 245), rgba(96, 255, 165), rgba(226, 255, 62), rgba(255, 196, 77), rgba(255, 102, 77));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+}
+:global(nav) > :global(ul) > :global(li) > :global(.nav-link.active) {
+    background: linear-gradient(90deg, rgba(247, 73, 212), rgba(90, 37, 234), rgba(50, 196, 245), rgba(96, 255, 165), rgba(226, 255, 62), rgba(255, 196, 77), rgba(255, 102, 77));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+:global(li) > :global(a) {
+    color: inherit;
+    text-decoration: none;
+}
+:global(.nav-link:hover){
+    font-weight: 700;
+    transform: scale(1.5); /* 替换 font-size 修改 */
+    transform-origin: center center; /* 控制缩放基点 */
+}
