@@ -21,7 +21,8 @@ button{
 
 @font-face {
     font-family: "Futuran";
-    src: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/font/Futura.ttf"); /* 构建后的实际路径 */
+    src: url("https://hanabri.oss-cn-beijing.aliyuncs.com/HanabriWeb/font/Futura.ttf") format("truetype"); /* 构建后的实际路径 */
+    font-display: swap; /* 避免阻塞渲染 */
 }
 body {
     background: #FFFFFF;
