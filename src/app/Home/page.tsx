@@ -42,7 +42,7 @@ function HomePage(): React.JSX.Element  {
                                 </a>
                                 <div className={`${styles.musicNewMessageTitle} ${styles.admissionUnderTop}`}>Holographic Action</div>
                                 <div className={`${styles.musicNewMessageAuthor} ${styles.admissionUnderTop}`}>By HANABRI</div>
-                                <p className={`${styles.newText} ${styles.admissionUnderTop}`}><span className="textWhite50">Releases on </span>6 January
+                                <p className={`${styles.newText} ${styles.admissionUnderTop}`}><span className={styles.textWhite50}>Releases on </span>6 January
                                     2025</p>
                                 <button className={`${styles.musicNewMessageButtonListen} ${styles.admissionUnderTop}`}>LISTEN NOW</button>
                             </div>

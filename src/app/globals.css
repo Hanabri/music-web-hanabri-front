@@ -21,7 +21,7 @@ button{
 
 @font-face {
     font-family: "Futuran";
-    src:url("../../public/font/Futura.ttf");
+    src:url("/font/Futura.ttf");
 }
 body {
     background: #FFFFFF;
