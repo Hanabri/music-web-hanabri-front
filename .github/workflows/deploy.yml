@@ -23,7 +23,7 @@ jobs:
       - name: Build Next.js App
         run: npm run build                                         # :contentReference[oaicite:9]{index=9}
       - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v3.0.0                         # :contentReference[oaicite:13]{index=13}
+        uses: amondnet/vercel-action@v25.2.0                       # :contentReference[oaicite:13]{index=13}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-args: "--prod --yes"
