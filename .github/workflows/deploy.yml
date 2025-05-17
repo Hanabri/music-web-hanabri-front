@@ -26,5 +26,5 @@ jobs:
         uses: amondnet/vercel-action@v25.2.0                       # :contentReference[oaicite:13]{index=13}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-args: "--prod --yes"
+          vercel-args: "--prod --confirm"
           working-directory: .
