@@ -56,8 +56,8 @@
     color: inherit;
     text-decoration: none;
 }
-:global(.nav-link:hover){
+.navWrapper :global(.nav-link:hover) { /* 添加父级作用域 */
     font-weight: 700;
-    transform: scale(1.5); /* 替换 font-size 修改 */
-    transform-origin: center center; /* 控制缩放基点 */
+    transform: scale(1.5);
+    transform-origin: center center;
 }
